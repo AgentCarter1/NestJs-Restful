@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+    web:
+        container_name: restfulnestjs
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        networks:
+            - restfulapinestjs
+        command: npm start
+        restart: always
+
+networks:
+  restfulapinestjs:
+
+
+
